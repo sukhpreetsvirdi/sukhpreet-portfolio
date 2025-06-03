@@ -19,7 +19,7 @@ const About = () => {
           <p>
             Outside of coding, I enjoy [mention a hobby or two, e.g., hiking, reading, playing guitar], which helps me stay creative and balanced.
           </p>
-          <a href="/CV_2025052617394812.pdf" download className={styles.resumeBtn}>Download Resume</a>
+          <a href="/Cv-Sukhpreet-Singh.pdf" download className={styles.resumeBtn}>Download Resume</a>
         </div>
         {/* Optional: Add an image here */}
         {/* <div className={styles.aboutImage}>
