@@ -3,6 +3,7 @@ import React from 'react';
 // import aboutImage from '../../assets/about-us.jpg'; // Optional: if you have an image for this section
 import styles from './About.module.css';
 
+
 const About = () => {
   return (
     <section className={styles.about} id="about">
@@ -18,7 +19,7 @@ const About = () => {
           <p>
             Outside of coding, I enjoy [mention a hobby or two, e.g., hiking, reading, playing guitar], which helps me stay creative and balanced.
           </p>
-          <a href="" download className={styles.resumeBtn}>Download Resume</a>
+          <a href="/CV_2025052617394812.pdf" download className={styles.resumeBtn}>Download Resume</a>
         </div>
         {/* Optional: Add an image here */}
         {/* <div className={styles.aboutImage}>
