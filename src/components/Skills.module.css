@@ -1,0 +1,48 @@
+/* src/components/Skills.module.css */
+.skills {
+  padding: 5rem 2rem;
+  background-color: #2a2a44; /* Slightly lighter dark background */
+  text-align: center;
+}
+
+/* .sectionTitle styles would be similar to About.module.css */
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillItem {
+  background-color: rgba(42, 42, 68, 0.7); /* Semi-transparent card background */
+  padding: 2rem;
+  border-radius: 12px; /* More rounded */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(0, 188, 212, 0.2); /* Subtle border */
+}
+
+.skillItem:hover {
+  transform: translateY(-12px); /* Lift higher */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  background-color: rgba(42, 42, 68, 0.9); /* Slightly more opaque on hover */
+}
+
+.skillItem i { /* For Font Awesome icons */
+  font-size: 4rem; /* Larger icons */
+  color: var(--accent1); /* Cyan accent */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(0, 188, 212, 0.8); /* Icon glow */
+}
+
+.skillItem h3 {
+  font-size: 1.4rem;
+  color: var(--light-text); /* Light text */
+  font-weight: 600;
+}

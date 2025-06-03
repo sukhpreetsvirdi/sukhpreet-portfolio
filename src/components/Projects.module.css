@@ -1,0 +1,33 @@
+.projects {
+  padding: 5rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.sectionTitle { /* Re-use from About.module.css or define here */
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}

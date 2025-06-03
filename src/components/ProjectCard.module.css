@@ -1,0 +1,117 @@
+/* src/components/Projects/ProjectCard.module.css */
+.projectCard {
+  background-color: rgba(42, 42, 68, 0.7); /* Dark semi-transparent card */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(0, 188, 212, 0.2);
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent2); /* Highlight border on hover */
+}
+
+.projectImage {
+  width: 100%;
+  height: 250px; /* Slightly taller */
+  overflow: hidden;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .projectImage img {
+  transform: scale(1.08); /* More pronounced zoom */
+}
+
+.projectInfo {
+  padding: 1.8rem; /* More padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectInfo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--light-text); /* Light heading text */
+  font-family: 'Orbitron', sans-serif;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--dark-text); /* Light body text */
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.techTag {
+  background-color: rgba(0, 188, 212, 0.2); /* Accent color with transparency */
+  color: var(--accent1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--accent1); /* Outline */
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: auto;
+}
+
+.liveBtn, .githubBtn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.liveBtn {
+  background: var(--gradient-1); /* Gradient button */
+  color: var(--light-text);
+  border: none; /* No extra border */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+.liveBtn:hover {
+  background: var(--gradient-2); /* Different gradient on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 46, 99, 0.8);
+}
+
+.githubBtn {
+  background-color: #333; /* Darker github button */
+  color: var(--light-text);
+  border: 2px solid #555; /* Subtle border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.githubBtn:hover {
+  background-color: #000;
+  border-color: var(--accent3); /* Hot pink border on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 46, 99, 0.8);
+}

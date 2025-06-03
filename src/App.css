@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@500;700&display=swap'); /* Adding Orbitron for headings */
+
+:root {
+  /* New Futuristic Colors */
+  --dark-bg: #1a1a2e;
+  --dark-text: #e0e0ff;
+  --light-text: #ffffff;
+  --accent1: #00bcd4; /* Cyan */
+  --accent2: #8d3aed; /* Vibrant Purple */
+  --accent3: #ff2e63; /* Hot Pink/Red */
+  --gradient-1: linear-gradient(to right, var(--accent1), var(--accent2));
+  --gradient-2: linear-gradient(to right, var(--accent3), var(--accent1));
+
+  /* Existing Neutrals (adjust if needed) */
+  --white-bg: #ffffff;
+  --border-color: #444; /* Darker border */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* General body font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-bg); /* Dark background for overall site */
+  color: var(--dark-text); /* Light text on dark background */
+  line-height: 1.7; /* Slightly more line height */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font for headings */
+  color: var(--light-text); /* White/light text for headings */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  text-decoration: none;
+  color: var(--accent1); /* Link color */
+  transition: color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: var(--accent3); /* Hover color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Scrollbar styling (optional, but adds to futuristic feel) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent1);
+}
+
+/* Basic section padding */
+section {
+  padding: 6rem 2rem; /* Consistent padding */
 }

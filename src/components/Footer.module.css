@@ -1,0 +1,49 @@
+/* src/components/Footer.module.css */
+.footer {
+  background-color: #111; /* Very dark footer */
+  color: var(--dark-text);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(141, 58, 237, 0.2); /* Accent border top */
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footerContent p {
+  font-size: 1rem;
+  color: #aaa; /* Slightly subdued text */
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem; /* More space between icons */
+}
+
+.socialLinks a {
+  color: var(--dark-text);
+  font-size: 1.8rem; /* Slightly larger icons */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--accent2); /* Purple accent on hover */
+  text-shadow: 0 0 10px var(--accent2); /* Glowing effect */
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .socialLinks {
+    margin-top: 1rem;
+  }
+}

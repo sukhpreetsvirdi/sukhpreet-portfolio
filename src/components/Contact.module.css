@@ -1,0 +1,212 @@
+/* src/components/Contact.module.css */
+.contact {
+  padding: 5rem 2rem;
+  background-color: var(--dark-bg);
+  text-align: center;
+  color: var(--dark-text); /* This should probably be --light-text or similar for contrast */
+}
+
+/* Assuming you have these variables defined in a global CSS file or :root selector */
+/* :root {
+    --dark-bg: #1a1a2e;
+    --light-text: #e0e0e0;
+    --dark-text: #a0a0a0;
+    --accent1: #00bcd4;  // Cyan
+    --accent2: #8d3aed;  // Purple
+    --accent3: #ff2e63;  // Pinkish-Red
+    --gradient-1: linear-gradient(to right, #00bcd4, #8d3aed);
+    --gradient-2: linear-gradient(to right, #ff2e63, #8d3aed);
+} */
+
+/* .sectionTitle styles would be similar to About.module.css */
+/* Ensure you have a global h2 or .sectionTitle style for this */
+.sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent1); /* Or var(--light-text) */
+    font-family: 'Montserrat', sans-serif; /* Example, adjust as needed */
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+}
+
+
+.subtitle {
+  font-size: 1.3rem;
+  color: var(--dark-text); /* Again, consider if this should be --light-text for better contrast */
+  margin-bottom: 3.5rem;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contactForm {
+  flex: 2;
+  min-width: 300px;
+  background-color: #2a2a44; /* Slightly lighter dark background for form */
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  border: 1px solid rgba(141, 58, 237, 0.3); /* Subtle purple border */
+}
+
+.formGroup {
+  margin-bottom: 1.8rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--light-text);
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1px solid #555; /* Darker border */
+  border-radius: 6px;
+  font-size: 1.05rem;
+  background-color: #3a3a5a; /* Darker input background */
+  color: var(--light-text);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent2); /* Purple accent on focus */
+  box-shadow: 0 0 0 4px rgba(141, 58, 237, 0.3); /* Glowing outline */
+}
+
+.submitBtn {
+  background: var(--gradient-1); /* Gradient button */
+  color: var(--light-text);
+  padding: 1.1rem 3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+.submitBtn:hover {
+  background: var(--gradient-2);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 46, 99, 0.8);
+}
+
+.statusMessage {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent1); /* Success color */
+}
+
+.contactInfo {
+  flex: 1;
+  min-width: 280px;
+  background-color: #2a2a44;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  border: 1px solid rgba(0, 188, 212, 0.3); /* Subtle cyan border */
+}
+
+.contactInfo h3 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  color: var(--accent1);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contactInfo p {
+  margin-bottom: 1.2rem;
+  color: var(--dark-text); /* Consider changing to --light-text */
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.contactInfo p i {
+  color: var(--accent2); /* Purple accent for icons */
+  font-size: 1.4rem;
+}
+
+.socialLinks {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.8rem;
+  /* Align icons center if they are the only elements here */
+  justify-content: flex-start; /* Or center if you prefer */
+  align-items: center;
+}
+
+/* --- NEW STYLES FOR SOCIAL ICONS --- */
+.socialLinks .socialIcon {
+  width: 40px;   /* Set a fixed width for the icons */
+  height: 40px;  /* Set a fixed height */
+  object-fit: contain; /* Ensures the image fits within the bounds without cropping, maintaining aspect ratio */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  /* Remove any default browser border/padding if it's there */
+  border: none;
+  padding: 0;
+  display: block; /* Ensures they don't have inline-block spacing issues */
+}
+
+.socialLinks .socialIcon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  /* You can add a subtle shadow or filter if you want a visual pop */
+  /* filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)); */
+}
+
+/* If you want to use the a tag for the hover effect and apply it to the image */
+.socialLinks a {
+    /* Keep existing styles for the 'a' tag, but they now apply to the link wrapper */
+    /* Remove font-size as it's for FA icons, not for the <img> */
+    /* font-size: 2.2rem; <-- Remove this */
+    display: inline-block; /* Essential to allow transform on hover for the image */
+    line-height: 1; /* Helps with vertical alignment if needed */
+}
+
+.socialLinks a:hover .socialIcon {
+    /* This will apply the hover effect to the image when the link is hovered */
+    transform: translateY(-5px); /* Matches your original socialLinks a:hover */
+    filter: drop-shadow(0 0 10px var(--accent3)); /* Adds a glow effect */
+}
+
+/* If you still need to style Font Awesome icons elsewhere, keep this */
+/* .socialLinks a i {
+    color: var(--dark-text);
+    font-size: 2.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLinks a i:hover {
+    color: var(--accent3);
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px var(--accent3);
+} */
+
+
+@media (max-width: 768px) {
+  .contactForm, .contactInfo {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+}

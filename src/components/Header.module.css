@@ -1,0 +1,65 @@
+/* src/components/Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: rgba(26, 26, 46, 0.9); /* Semi-transparent dark background */
+  backdrop-filter: blur(5px); /* Optional glassmorphism effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 188, 212, 0.2); /* Subtle accent border */
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent1); /* Logo in accent color */
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-left: 3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--dark-text); /* Light text for links */
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent3); /* Hot pink on hover */
+  text-shadow: 0 0 8px var(--accent3); /* Subtle glow */
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--accent1); /* Accent color for hamburger */
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav {
+    /* ... existing styles ... */
+    background-color: var(--dark-bg); /* Ensure dark background for mobile menu */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}

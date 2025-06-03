@@ -1,0 +1,171 @@
+/* src/components/Hero.module.css */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem; /* More padding */
+  background: var(--gradient-1); /* Vibrant gradient background */
+  min-height: 90vh; /* Taller hero section */
+  gap: 4rem;
+  flex-wrap: wrap-reverse;
+  position: relative; /* For pseudo-elements */
+  overflow: hidden; /* Hide overflowing glow */
+}
+
+/* Optional: Add some background glow/pattern for futuristic effect */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent2) 0%, transparent 70%);
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: float1 8s infinite ease-in-out;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--accent3) 0%, transparent 70%);
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: float2 8s infinite ease-in-out reverse;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, 30px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 700px;
+  z-index: 1; /* Ensure content is above pseudo-elements */
+}
+
+.heroContent h1 {
+  font-size: 4.5rem; /* Larger heading */
+  margin-bottom: 1.5rem;
+  color: var(--light-text);
+  text-shadow: 0 0 15px rgba(0, 188, 212, 0.7); /* Stronger glow for name */
+}
+
+.heroContent h1 span {
+  color: var(--light-text); /* Keep it white for glow effect */
+}
+
+.tagline {
+  font-size: 1.5rem; /* Larger tagline */
+  color: var(--dark-text); /* Slightly softer white */
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.primaryBtn, .secondaryBtn {
+  display: inline-block;
+  padding: 1.2rem 3rem; /* Larger buttons */
+  border-radius: 8px; /* Slightly more rounded */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.primaryBtn {
+  background-color: var(--accent3); /* Hot pink */
+  color: var(--light-text);
+  border: 2px solid var(--accent3);
+  box-shadow: 0 0 15px rgba(255, 46, 99, 0.5); /* Glowing shadow */
+}
+
+.primaryBtn:hover {
+  background-color: transparent;
+  color: var(--accent3);
+  box-shadow: 0 0 25px rgba(255, 46, 99, 0.8);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--accent1); /* Cyan */
+  border: 2px solid var(--accent1);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5); /* Glowing shadow */
+}
+
+.secondaryBtn:hover {
+  background-color: var(--accent1);
+  color: var(--light-text);
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.8);
+}
+
+.heroImage img {
+  width: 450px; /* Slightly larger image */
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent1); /* Vibrant border */
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Stronger glow */
+  animation: pulsate 2s infinite alternate; /* Subtle pulsating glow */
+}
+
+@keyframes pulsate {
+  0% { box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); }
+  100% { box-shadow: 0 0 45px rgba(0, 188, 212, 0.9); }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 1.5rem;
+  }
+  .heroContent h1 {
+    font-size: 3.5rem;
+  }
+  .tagline {
+    font-size: 1.2rem;
+  }
+  .heroImage img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.8rem;
+  }
+  .ctaButtons {
+    flex-direction: column;
+  }
+  .primaryBtn, .secondaryBtn {
+    padding: 1rem 2.5rem;
+  }
+  .heroImage img {
+    width: 300px;
+    height: 300px;
+  }
+}

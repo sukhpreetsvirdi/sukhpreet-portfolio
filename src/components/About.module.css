@@ -1,0 +1,48 @@
+/* Example for About.module.css - apply similarly to others */
+.about {
+  padding: 5rem 2rem;
+  background-color: var(--dark-bg); /* Use the dark background */
+  text-align: center;
+  color: var(--dark-text); /* Ensure text is readable */
+}
+
+.sectionTitle {
+  font-size: 3.5rem; /* Larger title */
+  margin-bottom: 3rem;
+  color: var(--accent1); /* Use accent color */
+  position: relative;
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.5); /* Subtle glow */
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px; /* Adjust line position */
+  transform: translateX(-50%);
+  width: 80px; /* Wider line */
+  height: 6px; /* Thicker line */
+  background: var(--gradient-2); /* Gradient line */
+  border-radius: 3px;
+}
+
+.aboutText {
+  /* ... existing styles ... */
+  color: var(--dark-text); /* Ensure text is light */
+}
+
+.resumeBtn {
+  background: var(--gradient-2); /* Gradient button */
+  color: var(--light-text);
+  box-shadow: 0 0 10px rgba(255, 46, 99, 0.5);
+  transition: all 0.3s ease;
+}
+
+.resumeBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 46, 99, 0.8);
+}
