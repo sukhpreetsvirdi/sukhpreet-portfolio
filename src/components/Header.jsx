@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <a href="/">Sukhpreet Singh</a> {/* Or your logo image */}
+        <a href="#">Sukhpreet Singh</a> {/* Or your logo image */}
       </div>
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
         <ul>
